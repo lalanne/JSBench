@@ -3,7 +3,7 @@
 
 const int ITERATIONS = 1000000;
 
-    void fooImpl() {}
+void fooImpl() {}
 
 void foo(benchmark::State& state) {
     while (state.KeepRunning()) {
