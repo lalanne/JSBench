@@ -7,6 +7,7 @@ set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}")
 #set(GCC_COVERAGE_LINK_FLAGS "-fopenmp")
 #set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} ${GCC_COVERAGE_LINK_FLAGS}")
 
+include_directories(/usr/local/include/mozjs-49a1)
 include_directories(/usr/local/include/benchmark)
 
 add_executable(JSBench  
@@ -14,6 +15,7 @@ add_executable(JSBench
 
 link_directories(/usr/local/lib)
 
-target_link_libraries(JSBench benchmark pthread) 
+target_link_libraries(JSBench benchmark pthread mozjs-49a1) 
+
 
 
