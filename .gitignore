@@ -1,4 +1,7 @@
 cmake_install.cmake
 Makefile
 JSBench
+CMakeFiles/
+CMakeCache.txt
+
 
