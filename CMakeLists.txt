@@ -14,6 +14,6 @@ add_executable(JSBench
 
 link_directories(/usr/local/lib)
 
-target_link_libraries(JSBench benchmark) 
+target_link_libraries(JSBench benchmark pthread) 
 
 
