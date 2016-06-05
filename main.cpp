@@ -7,8 +7,13 @@ using namespace JS;
 
 const int ITERATIONS = 1000000;
 
-void fooImpl() {
-    JS_Init();
+int fooImpl() {
+    // Initialize the JS engine.
+    if (!JS_Init()) return 1;
+
+    // Create a JS runtime.
+    JSRuntime *rt = JS_NewRuntime(8L * 1024L * 1024L);
+    if (!rt) return 1;
 }
 
 void foo(benchmark::State& state) {
